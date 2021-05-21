@@ -1,0 +1,12 @@
+Contadores
+
+Los contadores son unos componentes muy útiles para hacer temporizadores, unidades de PWM, controladores…  y cosas como direccionar memorias o recorrer tablas entre otras.
+
+Los contadores cuentan tics, en el caso de nuestras prácticas los tics son ascendentes, porque parten de 0 y suman una unidad por cada tic que llega.
+
+Tiene 2 entradas, 2 salidas y un parámetro:
+	cnt: es la entrada de los tics que vamos a contar.
+	Nº bits: es la salida bus de la cuenta. El número es la cantidad de bits y luces que le vamos a conectar.
+	ov(overflow): es la salida que emite un tic, cuando el contador ha llegado a la cuenta máxima y resetea la cuenta.
+	rst: es la entrada reset, aquí llegan los tics que resetean la cuenta.
+	El hilo de arriba es el parámetro número de módulo, si no se pone ninguno, deja el valor máximo del dispositivo.(2 elevado al número de bits del contador)
